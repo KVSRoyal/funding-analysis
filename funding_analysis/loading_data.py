@@ -16,15 +16,17 @@ assert len(nonexhibit_items_df.index) == 14325
 assert len(nonexhibit_items_df.columns) == 141
 
 
+# This is a block of code that needs to be changed because the data_flags file
+# is too large to push to GitHub
 # Load the data flags table as a pandas data frame
-data_flags_workbook_path = workbooks_directory_path / 'data_flags.xls'
-data_flags_df = pandas.read_excel(data_flags_workbook_path)
+#data_flags_workbook_path = workbooks_directory_path / 'data_flags.xls'
+#data_flags_df = pandas.read_excel(data_flags_workbook_path)
 
 # Do some shallow testing to verify everything went well
-col1_title = data_flags_df.columns[0]
-assert col1_title == 'STATE'
-assert len(data_flags_df.index) == 14325
-assert len(data_flags_df.columns) == 130
+#col1_title = data_flags_df.columns[0]
+#assert col1_title == 'STATE'
+#assert len(data_flags_df.index) == 14325
+#assert len(data_flags_df.columns) == 130
 
 
 # Load the relevant raw data table as a pandas data frame
