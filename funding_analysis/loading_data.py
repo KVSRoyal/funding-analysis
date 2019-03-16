@@ -15,18 +15,36 @@ assert col1_title == 'STATE'
 assert len(nonexhibit_items_df.index) == 14325
 assert len(nonexhibit_items_df.columns) == 141
 
-
-# This is a block of code that needs to be changed because the data_flags file
-# is too large to push to GitHub
 # Load the data flags table as a pandas data frame
-#data_flags_workbook_path = workbooks_directory_path / 'data_flags.xls'
-#data_flags_df = pandas.read_excel(data_flags_workbook_path)
+data_flags1_workbook_path = workbooks_directory_path / 'data_flags1.xls'
+data_flags1_df = pandas.read_excel(data_flags1_workbook_path)
 
 # Do some shallow testing to verify everything went well
-#col1_title = data_flags_df.columns[0]
-#assert col1_title == 'STATE'
-#assert len(data_flags_df.index) == 14325
-#assert len(data_flags_df.columns) == 130
+col1_title = data_flags1_df.columns[0]
+assert col1_title == 'STATE'
+assert len(data_flags1_df.index) == 7160
+assert len(data_flags1_df.columns) == 130
+
+
+data_flags2_workbook_path = workbooks_directory_path / 'data_flags2.xls'
+data_flags2_df = pandas.read_excel(data_flags2_workbook_path)
+
+# Do some shallow testing to verify everything went well
+col1_title = data_flags2_df.columns[0]
+assert col1_title == 'STATE'
+assert len(data_flags2_df.index) == 7165
+assert len(data_flags2_df.columns) == 130
+
+# Append the data_flags dataframes into one large dataframe
+data_flags_df = data_flags1_df.append(data_flags2_df, ignore_index=True)
+
+# Do some shallow testing to verify everything went well
+col1_title = data_flags2_df.columns[0]
+assert col1_title == 'STATE'
+for state_id in data_flags_df[col1_title]:
+    assert state_id != 'STATE'
+assert len(data_flags_df.index) == 14325
+assert len(data_flags_df.columns) == 130
 
 
 # Load the relevant raw data table as a pandas data frame
