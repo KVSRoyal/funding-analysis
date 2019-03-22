@@ -23,6 +23,16 @@ def find_description(variable, depth=1):
     :param depth: The number of tabs the dependees of this variable should be offset by
     :return: A meaningful description of the column title.
     """
+    # Add General Info that applies to all variables, but only if depth = 1
+    if depth == 1:
+        general_info = 'GENERAL INFO:\n' \
+                       'All amounts, except for fall membership and personal income, are expressed in\n' \
+                       'thousands of dollars. Fall membership data are presented in whole amounts.\n' \
+                       'Personal income totals are expressed in millions of dollars.\n\n' \
+                       'VARIABLE INFO:\n'
+    else:
+        general_info = ''
+
     # Find the appropriate description
     description = descriptions_df.loc[variable, 'Description']
 
@@ -46,13 +56,13 @@ def find_description(variable, depth=1):
                 description += '\t'
             description += dependee + ': ' + dependee_description
 
-    return description
+    return general_info + description
 
 
-print(find_description('STATE'))
+print(find_description('STATE') + '\n')
 
-print(find_description('CONUM'))
+print(find_description('CONUM') + '\n')
 
-print(find_description('TOTALREV'))
+print(find_description('TOTALREV') + '\n')
 
-print(find_description('TSTREV'))
+print(find_description('TSTREV') + '\n')
