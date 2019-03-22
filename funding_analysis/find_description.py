@@ -33,8 +33,14 @@ def find_description(variable, depth=1):
     else:
         general_info = ''
 
-    # Find the appropriate description
-    description = descriptions_df.loc[variable, 'Description']
+    # Make sure the input variable is upper case
+    variable = variable.upper()
+
+    # Find the appropriate description. If the variable cannot be found, return DNE
+    try:
+        description = descriptions_df.loc[variable, 'Description']
+    except KeyError:
+        return variable + ' does not exist'
 
     # Determine whether or not this value is dependent on any others
     dependees = descriptions_df.loc[variable, 'Dependees']
@@ -59,10 +65,10 @@ def find_description(variable, depth=1):
     return general_info + description
 
 
-print(find_description('STATE') + '\n')
+print(find_description('state') + '\n')
 
 print(find_description('CONUM') + '\n')
 
 print(find_description('TOTALREV') + '\n')
 
-print(find_description('TSTREV') + '\n')
+print(find_description('ppsgenad') + '\n')
