@@ -1,4 +1,5 @@
-# A program that will find the description of any variable name (column title) given to it
+# A program that will find the description of any variable name (column title) given to it from the
+# relevant_raw_data table
 import pathlib
 import pandas
 
