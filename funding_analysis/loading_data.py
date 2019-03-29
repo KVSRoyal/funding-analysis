@@ -57,4 +57,13 @@ assert col1_title == 'IDCENSUS'
 assert len(relevant_raw_data_df.index) == 14325
 assert len(relevant_raw_data_df.columns) == 66
 
+
+# Load the district data values given in the original analysis
+edbuild_district_data_workbook_path = workbooks_directory_path.parents[0] / 'edbuild_district_data.xlsx'
+edbuild_district_data = pandas.read_excel(edbuild_district_data_workbook_path)
+
+# Do some shallow testing to verify everything went well
+assert len(edbuild_district_data.index) == 12944
+assert len(edbuild_district_data.columns) == 21
+
 print('SUCCESS: Sheets parsed as expected.')

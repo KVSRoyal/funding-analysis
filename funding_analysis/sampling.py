@@ -9,7 +9,8 @@ workbooks_directory_path = pathlib.Path(__file__).parents[1] / 'resources' / 'ra
 relevant_raw_data_workbook_path = workbooks_directory_path / 'relevant_raw_data.xls'
 relevant_raw_data_df = pandas.read_excel(relevant_raw_data_workbook_path)
 
-def sample_column(variable):
+
+def select_column(variable):
     """
     Returns a pandas dataframe of all data for this variable / data item tag
     :param variable: The type of data item for which all available data is being sampled
@@ -18,7 +19,7 @@ def sample_column(variable):
     return relevant_raw_data_df[variable].to_frame()
 
 
-def sample_columns(variables):
+def select_columns(variables):
     """
     Returns a pandas dataframe of all data for the given list of variables / data item tags
     :param variables: A list of data items for which all available data is being sampled
@@ -27,5 +28,5 @@ def sample_columns(variables):
     return relevant_raw_data_df[variables]
 
 
-print(str(sample_column('CONUM')) + '\n')
-print(str(sample_columns(['NAME', 'TOTALREV'])) + '\n')
+print(str(select_column('CONUM')) + '\n')
+print(str(select_columns(['NAME', 'TOTALREV'])) + '\n')
