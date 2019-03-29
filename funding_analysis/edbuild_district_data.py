@@ -82,3 +82,16 @@ class EdbuildDistrictData:
             return variable + ':\t' + self.descriptions[variable.upper()]
         except KeyError:
             return variable + ' does not exist'
+
+    def find_descriptions(self, variables):
+        """
+        Returns meaningful descriptions of these column titles.
+        :param variable: The titles of columns in the edbuild district data file
+        :return: A meaningful description of these column titles.
+        """
+        descriptions = ''
+
+        for variable in variables:
+            descriptions += self.find_description(variable) + '\n'
+
+        return descriptions
