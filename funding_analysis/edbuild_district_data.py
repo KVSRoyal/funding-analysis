@@ -26,11 +26,11 @@ class EdbuildDistrictData:
 
     def select_column(self, variable):
         """
-        Returns a pandas dataframe of all data for this variable / column title
+        Returns a series of all data for this variable / column title
         :param variable: The variable / column title for which all available data is being selected
-        :return: All data for this variable / column item in a pandas dataframe
+        :return: All data for this variable / column item in a series
         """
-        return self.district_data_df[variable].to_frame()
+        return self.district_data_df[variable]
 
     def select_columns(self, variables):
         """

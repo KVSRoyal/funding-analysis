@@ -44,6 +44,13 @@ class RelevantData:
         """
         return self.relevant_raw_data_df
 
+    def get_all_nonexhibit_data(self):
+        """
+        Returns a pandas dataframe containing all nonexhibit data
+        :return: A pandas dataframe containing all nonexhibit data
+        """
+        return self.nonexhibit_items_df
+
     def select_column(self, variable):
         """
         Returns a pandas dataframe of all data for this variable / data item tag
@@ -54,9 +61,9 @@ class RelevantData:
         variable = variable.upper()
 
         try:
-            return self.relevant_raw_data_df[variable].to_frame()
+            return self.relevant_raw_data_df[variable]
         except KeyError:
-            return self.nonexhibit_items_df[variable].to_frame()
+            return self.nonexhibit_items_df[variable]
         except KeyError:
             return None
 
@@ -72,7 +79,7 @@ class RelevantData:
             # Ensure the variable is upper case
             variable = variable.upper()
 
-            selected_columns[variable] = self.select_column(variable)[variable]
+            selected_columns[variable] = self.select_column(variable)
 
         return selected_columns
 

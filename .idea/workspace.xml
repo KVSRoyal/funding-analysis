@@ -2,13 +2,17 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/funding_analysis/find_description.py" line="52" />
+    <bookmark url="file://$PROJECT_DIR$/funding_analysis/revenue_adjustments.py" line="73" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5180e3e9-8261-46ec-95f3-6cade733a10f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/funding_analysis/print_all_f33_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/funding_analysis/edbuild_district_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/funding_analysis/edbuild_district_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/funding_analysis/relevant_data_f33.py" beforeDir="false" afterPath="$PROJECT_DIR$/funding_analysis/relevant_data_f33.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/funding_analysis/revenue_adjustments.py" beforeDir="false" afterPath="$PROJECT_DIR$/funding_analysis/revenue_adjustments.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/descriptions.xls" beforeDir="false" afterPath="$PROJECT_DIR$/resources/descriptions.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/elsec16_sumtables.xls" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +25,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/funding_analysis/find_description.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+            <state relative-caret-position="17">
+              <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+              <folding>
+                <element signature="e#126#140#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -30,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/funding_analysis/relevant_data_f33.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1564">
-              <caret line="92" column="13" lean-forward="true" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
+            <state relative-caret-position="204">
+              <caret line="81" column="69" selection-start-line="81" selection-start-column="69" selection-end-line="81" selection-end-column="69" />
               <folding>
                 <element signature="e#84#98#0" expanded="true" />
               </folding>
@@ -42,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/funding_analysis/loading_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="71" />
+            <state relative-caret-position="-170">
+              <caret line="8" column="63" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
               <folding>
                 <element signature="e#95#109#0" expanded="true" />
               </folding>
@@ -54,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/funding_analysis/edbuild_district_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1218">
-              <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+            <state relative-caret-position="238">
+              <caret line="30" column="69" selection-start-line="30" selection-start-column="69" selection-end-line="30" selection-end-column="69" />
               <folding>
                 <element signature="e#96#110#0" expanded="true" />
               </folding>
@@ -66,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/funding_analysis/revenue_adjustments.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+            <state relative-caret-position="209">
+              <caret line="71" column="27" lean-forward="true" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
               <folding>
                 <element signature="e#118#177#0" expanded="true" />
               </folding>
@@ -76,10 +83,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../Fairness Research/fairness/Lib/codecs.py">
+        <entry file="file://$PROJECT_DIR$/funding_analysis/print_all_f33_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="324" selection-start-line="324" selection-end-line="324" />
+            <state relative-caret-position="119">
+              <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -97,6 +104,22 @@
     <findStrings>
       <find>capital</find>
       <find>revenue</find>
+      <find>spending</find>
+      <find>local</find>
+      <find>cha</find>
+      <find>district</find>
+      <find>sch</find>
+      <find>lev</find>
+      <find>schlev</find>
+      <find>student</find>
+      <find>num</find>
+      <find>expenditure</find>
+      <find>enroll</find>
+      <find>charter</find>
+      <find>TFEd</find>
+      <find>st</find>
+      <find>private</find>
+      <find>v92</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -114,6 +137,7 @@
         <option value="$PROJECT_DIR$/funding_analysis/cleaning.py" />
         <option value="$PROJECT_DIR$/funding_analysis/relevant_data.py" />
         <option value="$PROJECT_DIR$/funding_analysis/find_description.py" />
+        <option value="$PROJECT_DIR$/funding_analysis/print_all_f33_data.py" />
         <option value="$PROJECT_DIR$/funding_analysis/edbuild_district_data.py" />
         <option value="$PROJECT_DIR$/funding_analysis/relevant_data_f33.py" />
         <option value="$PROJECT_DIR$/funding_analysis/revenue_adjustments.py" />
@@ -121,8 +145,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="445" />
-    <option name="y" value="15" />
+    <option name="x" value="260" />
+    <option name="y" value="20" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -131,7 +155,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -159,12 +182,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -190,27 +214,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.revenue_adjustments">
-    <configuration name="cleaning" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="funding-analysis" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/funding_analysis" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/funding_analysis/cleaning.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="find_description" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="funding-analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -245,6 +248,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/funding_analysis/loading_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="print_all_f33_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="funding-analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/funding_analysis" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/funding_analysis/print_all_f33_data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -298,10 +322,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.revenue_adjustments" />
+        <item itemvalue="Python.print_all_f33_data" />
         <item itemvalue="Python.loading_data" />
         <item itemvalue="Python.sampling" />
         <item itemvalue="Python.find_description" />
-        <item itemvalue="Python.cleaning" />
       </list>
     </recent_temporary>
   </component>
@@ -318,20 +342,29 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15125495" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15125495" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.427157" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.42008486" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
@@ -355,13 +388,7 @@
     <entry file="file://$PROJECT_DIR$/calculations/revenue/local_sources.py" />
     <entry file="file://$PROJECT_DIR$/calculations/revenue/percentage_distribution_by_source.py" />
     <entry file="file://$PROJECT_DIR$/sampling/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/funding_analysis/cleaning.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/funding_analysis/cleaning.py" />
     <entry file="file://$PROJECT_DIR$/funding_analysis/selecting_f33_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -372,13 +399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/funding_analysis/find_description.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/funding_analysis/cleaning2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -386,27 +406,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../Fairness Research/fairness/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="304" column="75" lean-forward="true" selection-start-line="304" selection-start-column="75" selection-end-line="304" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funding_analysis/find_description.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+          <folding>
+            <element signature="e#126#140#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/funding_analysis/loading_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="71" />
+        <state relative-caret-position="-170">
+          <caret line="8" column="63" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
           <folding>
             <element signature="e#95#109#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../Fairness Research/fairness/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="324" selection-start-line="324" selection-end-line="324" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/funding_analysis/edbuild_district_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1218">
-          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+        <state relative-caret-position="238">
+          <caret line="30" column="69" selection-start-line="30" selection-start-column="69" selection-end-line="30" selection-end-column="69" />
           <folding>
             <element signature="e#96#110#0" expanded="true" />
           </folding>
@@ -415,18 +445,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/funding_analysis/relevant_data_f33.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="92" column="13" lean-forward="true" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="81" column="69" selection-start-line="81" selection-start-column="69" selection-end-line="81" selection-end-column="69" />
           <folding>
             <element signature="e#84#98#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/funding_analysis/revenue_adjustments.py">
+    <entry file="file://$PROJECT_DIR$/funding_analysis/print_all_f33_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funding_analysis/revenue_adjustments.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="71" column="27" lean-forward="true" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
           <folding>
             <element signature="e#118#177#0" expanded="true" />
           </folding>
