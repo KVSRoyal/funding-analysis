@@ -9,35 +9,27 @@ relevant_data = RelevantData()
 district_data = EdbuildDistrictData()
 
 # Get just the state revenue
-adjusted_revenues = relevant_data.select_columns(['Idcensus', 'TSTREV', 'TLOCREV', 'TFEDREV','SCHLEV'])
-print('Unchanged revenues')
-print(adjusted_revenues)
+adjusted_revenues = relevant_data.select_columns(['Idcensus', 'STATE', 'TSTREV', 'TLOCREV', 'TFEDREV', 'SCHLEV', 'ENROLL'])
 
 # Remove the capital outlay
 capital_outlay_series = relevant_data.select_column('C11')
 adjusted_revenues['TSTREV'] = adjusted_revenues['TSTREV'] - capital_outlay_series
-print('Revenue after removing capital outlay from State Revenue')
-print(adjusted_revenues)
 
 # Remove the revenue generated from sale of property
 revenue_from_sale_of_property = relevant_data.select_column('u11')
 adjusted_revenues['TLOCREV'] = adjusted_revenues['TLOCREV'] - revenue_from_sale_of_property
-print('Revenue after removing revenue generated from the sale of property from local revenue')
-print(adjusted_revenues)
 
 # Removes a proportional share (based on the percent of each districts’ revenues that come from local, state and federal
 # sources) of the total amount of money sent to outside charter LEAs—an expenditure category included in the
 # F33 survey.
 
 # Calculate what percentage of the revenue comes from each source
-total_revenues = relevant_data.select_column('TOTALREV')
-local_revenue_proportion = relevant_data.select_column('Tlocrev') / total_revenues
-state_revenue_proportion = relevant_data.select_column('TSTREV') / total_revenues
-federal_revenue_proportion = relevant_data.select_column('TFEDREV') / total_revenues
+local_revenue_proportion = relevant_data.select_column('PCTLTOT') / 100
+state_revenue_proportion = relevant_data.select_column('PCTSTOT') / 100
+federal_revenue_proportion = relevant_data.select_column('PCTFTOT') / 100
 
 # Calculate the total amount sent to outside charter LEAs (both private and charter schools)
 total_money_sent_outside = relevant_data.select_column('v91') + relevant_data.select_column('v92')
-print('Total money sent to outside charter LEAs')
 
 # Calculate how much to remove from each revenue total
 amount_to_remove_from_local_revenue = local_revenue_proportion * total_money_sent_outside
@@ -49,26 +41,35 @@ adjusted_revenues['TLOCREV'] = adjusted_revenues['TLOCREV'] - amount_to_remove_f
 adjusted_revenues['TSTREV'] = adjusted_revenues['TSTREV'] - amount_to_remove_from_state_revenue
 adjusted_revenues['TFEDREV'] = adjusted_revenues['TFEDREV'] - amount_to_remove_from_federal_revenue
 
-print('Revenue after removing money spent on outside charter LEAs from all revenues')
-print(adjusted_revenues)
-
-
 # Exclude the Districts that are of types 5 (vocational or special education), 6 (nonoperating) or 7 (educational
 # service agency) in the F33 data
 adjusted_revenues = adjusted_revenues.loc[adjusted_revenues['SCHLEV'] != '05']
 adjusted_revenues = adjusted_revenues.loc[adjusted_revenues['SCHLEV'] != '06']
 adjusted_revenues = adjusted_revenues.loc[adjusted_revenues['SCHLEV'] != '07']
 
-print('Revenue after removing schools of type 5, 6 and 7')
-print(adjusted_revenues)
+# Exclude districts with zero total enrollments (missing is also represented as 0)
+adjusted_revenues = adjusted_revenues.loc[adjusted_revenues['ENROLL'] != 0]
 
-# If F33 school type is missing, exclude districts that are of types 4 (regional education service agency),
-# 5 (state agency), 6 (federal agency), 7 (charter agency) or 8 (other education agency) based on Common Core of Data
-# TODO
-#
+# Exclude districts with zero revenue (missing is also represented as 0)
+adjusted_revenues = adjusted_revenues.loc[adjusted_revenues['TFEDREV'] != 0]
+adjusted_revenues = adjusted_revenues.loc[adjusted_revenues['TLOCREV'] != 0]
+adjusted_revenues = adjusted_revenues.loc[adjusted_revenues['TSTREV'] != 0]
 
+# Exclude districts with low revenues (< $500,000)
+adjusted_revenues = adjusted_revenues.loc[adjusted_revenues['TLOCREV'] >= 500]
+adjusted_revenues = adjusted_revenues.loc[adjusted_revenues['TSTREV'] >= 500]
+adjusted_revenues = adjusted_revenues.loc[adjusted_revenues['TFEDREV'] >= 500]
 
-# Exclude districts with missing or zero total enrollments
-adjusted_revenues = adjusted_revenues.loc[adjusted_revenues['SCHLEV'] != '05']
+# Exclude districts with high revenues (> $100,000,000)
+adjusted_revenues = adjusted_revenues.loc[adjusted_revenues['TLOCREV'] <= 100000]
+adjusted_revenues = adjusted_revenues.loc[adjusted_revenues['TSTREV'] <= 100000]
+adjusted_revenues = adjusted_revenues.loc[adjusted_revenues['TFEDREV'] <= 100000]
 
+# Exclude districts from US Territories
+states = [str(num) for num in range(52)]
+adjusted_revenues = adjusted_revenues.loc[adjusted_revenues['STATE'].isin(states)]
+
+# Calculate Per-pupil state and local revenues
+adjusted_revenues['PPSTATE'] = adjusted_revenues['TSTREV'] / adjusted_revenues['ENROLL']
+adjusted_revenues['PPLOCAL'] = adjusted_revenues['TLOCREV'] / adjusted_revenues['ENROLL']
 print(adjusted_revenues)

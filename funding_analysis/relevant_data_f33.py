@@ -53,9 +53,9 @@ class RelevantData:
 
     def select_column(self, variable):
         """
-        Returns a pandas dataframe of all data for this variable / data item tag
+        Returns a series of all data for this variable / data item tag
         :param variable: The type of data item for which all available data is being selected
-        :return: All data for this data item in a pandas dataframe
+        :return: All data for this data item in a series
         """
         # Ensure the variable is upper case
         variable = variable.upper()
