@@ -8,6 +8,7 @@ class RelevantData:
     An object containing all relevant data from the Annual Survey of School System Finances and ways to
     load their descriptions
     """
+
     def __init__(self):
         """
         Creates a RelevantData object containing all relevant data from the Annual Survey of School System
@@ -19,6 +20,10 @@ class RelevantData:
         # Load the relevant raw data table as a pandas data frame
         relevant_raw_data_workbook_path = workbook_path / 'raw_data' / 'relevant_raw_data.xls'
         self.relevant_raw_data_df = pandas.read_excel(relevant_raw_data_workbook_path)
+
+        # Load the nonexhibit items as a pandas data frame
+        nonexhibit_items_workbook_path = workbook_path / 'raw_data' / 'nonexhibit_items.xls'
+        self.nonexhibit_items_df = pandas.read_excel(nonexhibit_items_workbook_path)
 
         # Load the description table as a pandas data frame\
         descriptions_workbook_path = workbook_path / 'descriptions.xls'
@@ -39,13 +44,28 @@ class RelevantData:
         """
         return self.relevant_raw_data_df
 
+    def get_all_nonexhibit_data(self):
+        """
+        Returns a pandas dataframe containing all nonexhibit data
+        :return: A pandas dataframe containing all nonexhibit data
+        """
+        return self.nonexhibit_items_df
+
     def select_column(self, variable):
         """
-        Returns a pandas dataframe of all data for this variable / data item tag
+        Returns a series of all data for this variable / data item tag
         :param variable: The type of data item for which all available data is being selected
-        :return: All data for this data item in a pandas dataframe
+        :return: All data for this data item in a series
         """
-        return self.relevant_raw_data_df[variable].to_frame()
+        # Ensure the variable is upper case
+        variable = variable.upper()
+
+        try:
+            return self.relevant_raw_data_df[variable]
+        except KeyError:
+            return self.nonexhibit_items_df[variable]
+        except KeyError:
+            return None
 
     def select_columns(self, variables):
         """
@@ -53,13 +73,20 @@ class RelevantData:
         :param variables: A list of data items for which all available data is being selected
         :return: All data for these data items in a pandas dataframe
         """
-        return self.relevant_raw_data_df[variables]
+        selected_columns = pandas.DataFrame()
+
+        for variable in variables:
+            # Ensure the variable is upper case
+            variable = variable.upper()
+
+            selected_columns[variable] = self.select_column(variable)
+
+        return selected_columns
 
     def find_description(self, variable, depth=1):
         """
         Returns a meaningful description of this column title.
-        :param variable: The title of a column in either the data_flags1, data_flags2,
-        relevant_raw_data or nonexhibit items file.
+        :param variable: The title of a column in either the relevant_raw_data or nonexhibit items file.
         :param depth: The number of tabs the dependees of this variable should be offset by
         :return: A meaningful description of the column title.
         """
@@ -98,8 +125,28 @@ class RelevantData:
             for dependee in parsed_dependees:
                 dependee_description = self.find_description(dependee, depth + 1)
                 description += '\n'
-                for tab in range(depth):
+                for tab in range(depth - 1):
                     description += '\t'
-                description += dependee + ': ' + dependee_description
+                description += dependee_description
 
-        return general_info + description
+        return general_info + variable + ':\t' + description
+
+    def find_descriptions(self, variables):
+        """
+        Returns a meaningful description of these column title.
+        :param variable: The titles of a columns in either the relevant_raw_data or nonexhibit items file.
+        :param depth: The number of tabs the dependees of this variable should be offset by
+        :return: A meaningful description of these column titles.
+        """
+        # Add general info
+        descriptions = 'GENERAL INFO:\n' \
+                       'All amounts, except for fall membership and personal income, are expressed in\n' \
+                       'thousands of dollars. Fall membership data are presented in whole amounts.\n' \
+                       'Personal income totals are expressed in millions of dollars.\n\n' \
+                       'VARIABLE INFO:\n'
+
+        # Add info for each variable
+        for variable in variables:
+            descriptions += self.find_description(variable, 2) + '\n'
+
+        return descriptions
