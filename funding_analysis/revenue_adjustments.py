@@ -1,6 +1,8 @@
 # A program that will make all necessary adjustments to revenue data from the Annual Survey of School System Finances
 from funding_analysis.relevant_data_f33 import RelevantData
 from funding_analysis.edbuild_district_data import EdbuildDistrictData
+import pathlib
+import pandas
 
 # Load the relevant data
 relevant_data = RelevantData()
@@ -9,7 +11,8 @@ relevant_data = RelevantData()
 district_data = EdbuildDistrictData()
 
 # Get just the state revenue
-adjusted_revenues = relevant_data.select_columns(['Idcensus', 'STATE', 'TSTREV', 'TLOCREV', 'TFEDREV', 'SCHLEV', 'ENROLL'])
+adjusted_revenues = relevant_data.select_columns(['Idcensus', 'STATE', 'TSTREV', 'TLOCREV', 'TFEDREV', 'SCHLEV',
+                                                  'ENROLL'])
 
 # Remove the capital outlay
 capital_outlay_series = relevant_data.select_column('C11')
@@ -73,3 +76,19 @@ adjusted_revenues = adjusted_revenues.loc[adjusted_revenues['STATE'].isin(states
 adjusted_revenues['PPSTATE'] = adjusted_revenues['TSTREV'] / adjusted_revenues['ENROLL']
 adjusted_revenues['PPLOCAL'] = adjusted_revenues['TLOCREV'] / adjusted_revenues['ENROLL']
 print(adjusted_revenues)
+
+
+# Load all of the Common Core Data
+outputfilepath = pathlib.Path(__file__).parents[1] / 'resources' / 'outdatademo.xls'
+
+# Reads file
+demographic_df = pandas.read_excel(outputfilepath)
+
+# Add all columns from the demographic table to the cost adjusted revenues table
+for col in demographic_df.columns:
+    adjusted_revenues[col] = demographic_df[col]
+
+# Print names of columns in table
+for col in adjusted_revenues.columns:
+    print(col)
+print()
