@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/funding_analysis/find_description.py" line="52" />
+    <bookmark url="file://$PROJECT_DIR$/funding_analysis/examples/find_description.py" line="52" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5180e3e9-8261-46ec-95f3-6cade733a10f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/funding_analysis/edbuild_district_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/funding_analysis/edbuild_data/edbuild_district_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/funding_analysis/find_description.py" beforeDir="false" afterPath="$PROJECT_DIR$/funding_analysis/examples/find_description.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/funding_analysis/loading_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/funding_analysis/examples/loading_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/funding_analysis/print_all_f33_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/funding_analysis/f33_data/print_all_f33_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/funding_analysis/relevant_data_f33.py" beforeDir="false" afterPath="$PROJECT_DIR$/funding_analysis/f33_data/relevant_data_f33.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/funding_analysis/revenue_adjustments.py" beforeDir="false" afterPath="$PROJECT_DIR$/funding_analysis/revenue_adjustments.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/funding_analysis/selecting_f33_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/funding_analysis/examples/selecting_f33_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/descriptions.xls" beforeDir="false" afterPath="$PROJECT_DIR$/resources/raw_f33_data/descriptions.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/raw_data/data_flags1.xls" beforeDir="false" afterPath="$PROJECT_DIR$/resources/raw_f33_data/data_flags1.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/raw_data/data_flags2.xls" beforeDir="false" afterPath="$PROJECT_DIR$/resources/raw_f33_data/data_flags2.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/raw_data/nonexhibit_items.xls" beforeDir="false" afterPath="$PROJECT_DIR$/resources/raw_f33_data/nonexhibit_items.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/raw_data/relevant_raw_data.xls" beforeDir="false" afterPath="$PROJECT_DIR$/resources/raw_f33_data/relevant_raw_data.xls" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,24 +28,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/funding_analysis/find_description.py">
+        <entry file="file://$PROJECT_DIR$/funding_analysis/f33_data/print_all_f33_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="46" column="58" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
-              <folding>
-                <element signature="e#126#140#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="204">
+              <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/funding_analysis/cleaning2.py">
+        <entry file="file://$PROJECT_DIR$/funding_analysis/f33_data/relevant_data_f33.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+            <state relative-caret-position="204">
+              <caret line="27" column="60" lean-forward="true" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#84#98#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,23 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/funding_analysis/revenue_adjustments.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="83" column="12" lean-forward="true" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
-              <folding>
-                <element signature="e#118#177#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/funding_analysis/print_all_f33_data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#95#154#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="694">
+              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
             </state>
           </provider>
         </entry>
@@ -120,6 +113,11 @@
         <option value="$PROJECT_DIR$/funding_analysis/relevant_data_f33.py" />
         <option value="$PROJECT_DIR$/funding_analysis/print_all_f33_data.py" />
         <option value="$PROJECT_DIR$/funding_analysis/revenue_adjustments.py" />
+        <option value="$PROJECT_DIR$/funding_analysis/edbuild_data/edbuild_district_data.py" />
+        <option value="$PROJECT_DIR$/funding_analysis/f33_data/selecting_f33_data.py" />
+        <option value="$PROJECT_DIR$/funding_analysis/examples/find_description.py" />
+        <option value="$PROJECT_DIR$/funding_analysis/examples/selecting_f33_data.py" />
+        <option value="$PROJECT_DIR$/funding_analysis/f33_data/relevant_data_f33.py" />
       </list>
     </option>
   </component>
@@ -134,7 +132,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -150,18 +147,14 @@
             <path>
               <item name="funding-analysis" type="b2602c69:ProjectViewProjectNode" />
               <item name="funding-analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="funding-analysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="funding-analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="raw_data" type="462c0819:PsiDirectoryNode" />
+              <item name="funding_analysis" type="462c0819:PsiDirectoryNode" />
+              <item name="f33_data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -170,14 +163,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\KORYANN\Documents\Repos\funding-analysis\resources\raw_f33_data" />
+      <recent name="C:\Users\KORYANN\Documents\Repos\funding-analysis\funding_analysis\examples" />
+      <recent name="C:\Users\KORYANN\Documents\Repos\funding-analysis\funding_analysis\edbuild_data" />
+      <recent name="C:\Users\KORYANN\Documents\Repos\funding-analysis\funding_analysis\f33_data" />
+      <recent name="C:\Users\KORYANN\Documents\Repos\funding-analysis" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\KORYANN\Documents\Repos\funding-analysis\resources" />
       <recent name="C:\Users\KORYANN\Documents\Repos\funding-analysis\resources\raw_data" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\KORYANN\Documents\Repos\funding-analysis" />
-      <recent name="C:\Users\KORYANN\Documents\Repos\funding-analysis\calculations\expenditure" />
-      <recent name="C:\Users\KORYANN\Documents\Repos\funding-analysis\calculations" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -193,6 +188,27 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.revenue_adjustments">
+    <configuration name="edbuild_district_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="funding-analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/funding_analysis/edbuild_data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/funding_analysis/edbuild_data/edbuild_district_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="find_description" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="funding-analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -201,11 +217,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/funding_analysis" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/funding_analysis/examples" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/funding_analysis/find_description.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/funding_analysis/examples/find_description.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -214,7 +230,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="loading_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="print_all_f33_data (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="funding-analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -222,32 +238,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/funding_analysis" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/funding_analysis/f33_data" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/funding_analysis/loading_data.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="print_all_f33_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="funding-analysis" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/funding_analysis" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/funding_analysis/print_all_f33_data.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/funding_analysis/f33_data/print_all_f33_data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -277,7 +272,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="sampling" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="selecting_f33_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="funding-analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -285,11 +280,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/funding_analysis" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/funding_analysis/examples" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\KORYANN\Documents\Repos\funding-analysis\funding_analysis\selecting_f33_data.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/funding_analysis/examples/selecting_f33_data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -301,10 +296,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.revenue_adjustments" />
-        <item itemvalue="Python.print_all_f33_data" />
-        <item itemvalue="Python.loading_data" />
-        <item itemvalue="Python.sampling" />
+        <item itemvalue="Python.print_all_f33_data (1)" />
+        <item itemvalue="Python.selecting_f33_data" />
         <item itemvalue="Python.find_description" />
+        <item itemvalue="Python.edbuild_district_data" />
       </list>
     </recent_temporary>
   </component>
@@ -334,12 +329,12 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17767504" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17767504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1923621" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38330975" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -375,59 +370,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/funding_analysis/relevant_data_f33.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="59" column="43" lean-forward="true" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
-          <folding>
-            <element signature="e#84#98#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/funding_analysis/selecting_f33_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#102#116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/funding_analysis/edbuild_district_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="30" column="69" selection-start-line="30" selection-start-column="69" selection-end-line="30" selection-end-column="69" />
-          <folding>
-            <element signature="e#96#110#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/funding_analysis/loading_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
-          <folding>
-            <element signature="e#95#109#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/funding_analysis/find_description.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="46" column="58" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
-          <folding>
-            <element signature="e#126#140#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/funding_analysis/cleaning2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="323">
           <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -435,23 +380,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/funding_analysis/print_all_f33_data.py">
+    <entry file="file://$PROJECT_DIR$/funding_analysis/examples/find_description.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funding_analysis/edbuild_data/edbuild_district_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="e#96#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funding_analysis/examples/loading_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="36" lean-forward="true" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+          <folding>
+            <element signature="e#95#109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funding_analysis/examples/selecting_f33_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-268">
+          <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funding_analysis/f33_data/relevant_data_f33.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <caret line="27" column="60" lean-forward="true" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
           <folding>
-            <element signature="e#95#154#0" expanded="true" />
+            <element signature="e#84#98#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/funding_analysis/f33_data/print_all_f33_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/funding_analysis/revenue_adjustments.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="83" column="12" lean-forward="true" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
-          <folding>
-            <element signature="e#118#177#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="694">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
         </state>
       </provider>
     </entry>

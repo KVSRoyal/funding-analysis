@@ -1,6 +1,6 @@
 # A program that will make all necessary adjustments to revenue data from the Annual Survey of School System Finances
-from funding_analysis.relevant_data_f33 import RelevantData
-from funding_analysis.edbuild_district_data import EdbuildDistrictData
+from funding_analysis.f33_data.relevant_data_f33 import RelevantData
+from funding_analysis.edbuild_data.edbuild_district_data import EdbuildDistrictData
 import pathlib
 import pandas
 
