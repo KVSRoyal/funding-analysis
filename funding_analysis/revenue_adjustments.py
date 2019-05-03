@@ -3,16 +3,39 @@ from funding_analysis.f33_data.relevant_data_f33 import RelevantData
 from funding_analysis.edbuild_data.edbuild_district_data import EdbuildDistrictData
 import pathlib
 import pandas
+import re
 
 # Load the relevant data
 relevant_data = RelevantData()
 
-# Load the district data
-district_data = EdbuildDistrictData()
-
 # Get just the state revenue
 adjusted_revenues = relevant_data.select_columns(['Idcensus', 'STATE', 'TSTREV', 'TLOCREV', 'TFEDREV', 'SCHLEV',
-                                                  'ENROLL'])
+                                                  'ENROLL', 'NCESID'])
+
+# Put the NCESID in front and sort by it
+cols = list(adjusted_revenues.columns)
+cols.insert(0, cols.pop(cols.index('NCESID')))
+adjusted_revenues = adjusted_revenues.loc[:, cols]
+adjusted_revenues.sort_values(['NCESID'])
+
+# Load all of the Common Core Data
+outputfilepath = pathlib.Path(__file__).parents[1] / 'resources' / 'outdatademo.xls'
+
+# Read file and sort by NCESID
+demographic_df = pandas.read_excel(outputfilepath)
+demographic_df.sort_values('NCESID')
+
+# Add all non-duplicate columns from the demographic table to the cost adjusted revenues table
+for col in demographic_df.columns:
+    if col not in adjusted_revenues:
+        adjusted_revenues[col] = demographic_df[col]
+
+# Print the unchanged table
+print(adjusted_revenues)
+
+
+# ~~~ DONE LOADING ALL NECESSARY DATA. READY TO BEGIN ADJUSTMENTS ~~~ #
+
 
 # Remove the capital outlay
 capital_outlay_series = relevant_data.select_column('C11')
@@ -72,23 +95,24 @@ adjusted_revenues = adjusted_revenues.loc[adjusted_revenues['TFEDREV'] <= 100000
 states = [str(num) for num in range(52)]
 adjusted_revenues = adjusted_revenues.loc[adjusted_revenues['STATE'].isin(states)]
 
+# School districts that intersect with Native American Reservations because federal dollars are a much larger
+# proportion of revenue for Bureau of Indian Affairs (BIA) schools and the federal dollars are not always intended
+# to supplement funds from BIA. TODO
+our_ncesids = adjusted_revenues['NCESID'].tolist()
+
+
+# Load the district data
+district_data = EdbuildDistrictData()
+edbuild_ncesids = district_data.select_column('ncesid').tolist()
+print(edbuild_ncesids)
+
+# Check if the NCESID is in the edbuild data. Remove it if it isn't. (Our data has an extra leading zero)
+to_remove = [ncesid for ncesid in our_ncesids if int(ncesid[1:]) not in edbuild_ncesids]
+print(str(to_remove) + '\n' + str(len(our_ncesids)) + '\t' + str(len(edbuild_ncesids)) + '\t' + str(len(to_remove)) +
+      '\n')
+adjusted_revenues = adjusted_revenues.loc[~adjusted_revenues['NCESID'].isin(to_remove)]
+
 # Calculate Per-pupil state and local revenues
 adjusted_revenues['PPSTATE'] = adjusted_revenues['TSTREV'] / adjusted_revenues['ENROLL']
 adjusted_revenues['PPLOCAL'] = adjusted_revenues['TLOCREV'] / adjusted_revenues['ENROLL']
 print(adjusted_revenues)
-
-
-# Load all of the Common Core Data
-outputfilepath = pathlib.Path(__file__).parents[1] / 'resources' / 'outdatademo.xls'
-
-# Reads file
-demographic_df = pandas.read_excel(outputfilepath)
-
-# Add all columns from the demographic table to the cost adjusted revenues table
-for col in demographic_df.columns:
-    adjusted_revenues[col] = demographic_df[col]
-
-# Print names of columns in table
-for col in adjusted_revenues.columns:
-    print(col)
-print()

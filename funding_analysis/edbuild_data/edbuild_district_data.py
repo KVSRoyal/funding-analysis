@@ -30,7 +30,13 @@ class EdbuildDistrictData:
         :param variable: The variable / column title for which all available data is being selected
         :return: All data for this variable / column item in a series
         """
-        return self.district_data_df[variable]
+        # Ensure the variable is upper case
+        variable = variable.upper()
+
+        try:
+            return self.district_data_df[variable]
+        except KeyError:
+            return None
 
     def select_columns(self, variables):
         """
@@ -38,7 +44,15 @@ class EdbuildDistrictData:
         :param variables: A list of variables / column titles for which all available data is being selected
         :return: All data for these variables / column titles in a pandas dataframe
         """
-        return self.district_data_df[variables]
+        selected_columns = pandas.DataFrame()
+
+        for variable in variables:
+            # Ensure the variable is upper case
+            variable = variable.upper()
+
+            selected_columns[variable] = self.select_column(variable)
+
+        return selected_columns
 
     def __abbreviate_column_titles(self):
         """
